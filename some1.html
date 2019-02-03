@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Some</title>
+</head>
+<body>	
+	<!-- <button onclick="name('Вызвать метеорит ?')">Кнопка.</button>
+	<input id="elem" type="button" value="Тоже кнопка." />
+	<script>
+		function name(one) {
+			console.log("Hello " + name)
+		}
+
+		name(1)
+
+    elem.onclick = function() {;
+  };
+
+	</script> -->
+	<input id="number" type="text"><br>
+	<button onclick="func(1)">1</button>
+	<button onclick="func(2)">2</button>
+    <button onclick="func(3)">3</button><br>
+    <button onclick="func(4)">4</button>
+    <button onclick="func(5)">5</button>
+    <button onclick="func(6)">6</button><br>
+    <button onclick="func(7)">7</button>
+    <button onclick="func(8)">8</button>
+    <button onclick="func(9)">9</button><br>
+    <button onclick="funcAction('+')">+</button>
+    <button onclick="func(0)">0</button>
+    <button onclick="funcAction('-')">-</button><br>
+    <button onclick="funcAction('/')">/</button>
+    <button onclick="funcAction('*')">*</button>
+    <button onclick="funcRavno('=')">=</button>
+
+	<script>
+		var first;
+		var second;
+		var action;
+
+		function func(number) {
+			document.getElementById("number").value += number
+		}
+
+		function funcAction(sign){
+			this.action = sign
+			this.first = document.getElementById("number").value
+			document.getElementById("number").value = '' 
+		}
+
+		function funcRavno() {
+			this.second = document.getElementById("number").value
+			if(this.action === "+")
+				document.getElementById("number").value = Number.parseInt(this.first) + Number.parseInt(this.second)  
+		}
+	</script>
+</body>
+</html>
